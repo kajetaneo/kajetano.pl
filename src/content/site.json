@@ -1,0 +1,272 @@
+{
+  "_info": "CAŁA TREŚĆ STRONY. Zmieniasz tekst tutaj, zapisujesz, robisz git push. Zdjęcia leżą w src/assets/img, a tu podajesz tylko nazwę pliku.",
+  "meta": {
+    "url": "https://kajetano.pl",
+    "title": "Kajetano – marketing w social mediach, UGC i relacje z eventów",
+    "description": "Kajetan Pilachowski (Kajetano): twórca podróżniczy i marketingowiec. Relacje z eventów w social mediach, wideo UGC, reklamy i kampanie z influencerem, którego śledzi ponad 100 000 osób.",
+    "ogImage": "og.jpg",
+    "googleVerification": "hq5FANgh0PwZ9kkK5koHrV19RC2oXvy9t4lNsgJovuo"
+  },
+  "person": {
+    "name": "Kajetan Pilachowski",
+    "alias": "Kajetano",
+    "role": "Twórca podróżniczy i marketingowiec",
+    "emailUser": "kontakt",
+    "emailDomain": "kajetano.pl"
+  },
+  "socials": [
+    {
+      "name": "Instagram",
+      "handle": "@kajetano",
+      "url": "https://www.instagram.com/kajetano/"
+    },
+    {
+      "name": "TikTok",
+      "handle": "@kajetaneo",
+      "url": "https://www.tiktok.com/@kajetaneo"
+    },
+    {
+      "name": "Facebook",
+      "handle": "kajetaneo",
+      "url": "https://www.facebook.com/kajetaneo"
+    }
+  ],
+  "nav": [
+    {
+      "label": "O mnie",
+      "href": "#o-mnie"
+    },
+    {
+      "label": "Usługi",
+      "href": "#uslugi"
+    },
+    {
+      "label": "Portfolio",
+      "href": "#portfolio"
+    },
+    {
+      "label": "Opinie",
+      "href": "#opinie"
+    }
+  ],
+  "hero": {
+    "title": "Cześć, tu Kajetan!",
+    "lead": "Od prawie 10 lat robię marketing w social mediach. Poprowadzę relację z Twojego eventu, nagram wideo UGC, a przy okazji podrzucę opcję na tanie loty do Azji.",
+    "cta": "Pogadajmy o współpracy",
+    "ctaSecondary": "Zobacz portfolio",
+    "image": "kajetan-astronauta.jpg",
+    "imageAlt": "Kajetan w srebrnym skafandrze astronauty i niebieskich okularach, w niebieskim świetle"
+  },
+  "about": {
+    "title": "Kim jestem",
+    "image": "kajetan-maroko.jpg",
+    "imageAlt": "Kajetan siedzi na ławce na tle kolorowej marokańskiej mozaiki",
+    "paragraphs": [
+      "Nazywam się Kajetan Pilachowski, ale część z Was zna mnie jako Kajetano. Pasja do kreatywnego marketingu stała się moją pracą.",
+      "Ponad dziewięć lat temu zaczynałem od gamingowego contentu. Dziś prowadzę podróżniczy profil, który na różnych platformach śledzi już ponad 100 000 osób.",
+      "Praca w dużych korporacjach nauczyła mnie, co działa, a czego lepiej unikać. Dzięki temu rozumiem, czego potrzebuje marka, i wiem, jak to dowieźć.",
+      "W lutym 2024 roku rzuciłem korpo i w pełni zająłem się tym, co naprawdę mnie napędza."
+    ],
+    "signature": "Kajetan",
+    "signatureRole": "Kajetano, twórca i marketingowiec"
+  },
+  "services": {
+    "title": "Co mogę dla Ciebie zrobić",
+    "image": "ecoflow-plan.jpg",
+    "imageAlt": "Ekipa na planie zdjęciowym EcoFlow ogląda nagranie na monitorze",
+    "items": [
+      {
+        "name": "Content creator",
+        "tag": "foto i wideo",
+        "text": "Nagram materiały foto i wideo na profile Twojej marki. Na podstawie Twojego skryptu albo pomysłu, który wymyślimy razem od zera."
+      },
+      {
+        "name": "Relacja z eventu",
+        "tag": "na żywo",
+        "text": "Stories na bieżąco, rozmowy z ludźmi, odpowiedzi na komentarze i szybki montaż, żeby event żył w sieci, a nie tylko na sali."
+      },
+      {
+        "name": "Reklama wideo",
+        "tag": "z ekipą",
+        "text": "Z ekipą doświadczonych twórców wideo przygotuję reklamę, która wciąga i zostaje w pamięci na dłużej niż jeden scroll."
+      },
+      {
+        "name": "Influencer",
+        "tag": "100 000+ osób",
+        "text": "Pokażę Twój produkt, usługę albo sklep na moich profilach. Śledzi je ponad 100 000 osób, a posty docierają co miesiąc do milionów."
+      }
+    ]
+  },
+  "stats": {
+    "title": "W liczbach",
+    "image": "narwal-scena.jpg",
+    "imageAlt": "Kajetan prowadzi premierę robota Narwal na scenie przed dziennikarzami",
+    "items": [
+      {
+        "value": "100 000+",
+        "label": "osób śledzi moje profile w social mediach"
+      },
+      {
+        "value": "2 mln+",
+        "label": "osób, do których docieram co miesiąc"
+      },
+      {
+        "value": "10+ lat",
+        "label": "robię marketing"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "lead": "Duże i małe marki. Jednym pomagałem stawiać pierwsze kroki w social mediach, z innymi biłem rekordy na TikToku.",
+    "brands": [
+      "SkyShowtime",
+      "Frisco",
+      "Ubisoft",
+      "Xiaomi",
+      "Amazfit",
+      "PKP Cargo",
+      "Narwal",
+      "EcoFlow",
+      "SimplyBuy"
+    ],
+    "projects": [
+      {
+        "name": "Xiaomi Polska",
+        "kind": "TikTok, stała obsługa",
+        "text": "Wieloletni numer 1 wśród firmowych profili na TikToku w Polsce. Ponad 700 000 obserwujących, miliony wyświetleń i premiery na żywo.",
+        "link": "https://www.tiktok.com/@xiaomi.polska/",
+        "linkLabel": "Profil na TikToku",
+        "image": "xiaomi-scena.jpg",
+        "imageAlt": "Premiera Xiaomi: prowadzący na scenie, za nim ogromny ekran z opaską",
+        "imagePosition": ""
+      },
+      {
+        "name": "Ubisoft Polska",
+        "kind": "TikTok, stała obsługa",
+        "text": "Ponad 50 000 nowych obserwujących w rok i dziesiątki materiałów z setkami tysięcy organicznych wyświetleń.",
+        "link": "https://www.tiktok.com/@ubisoftpl",
+        "linkLabel": "Profil na TikToku",
+        "image": "ubisoft.jpg",
+        "imageAlt": "Świąteczna grafika: asasyn w białym kapturze z prezentem przed drzwiami",
+        "imagePosition": ""
+      },
+      {
+        "name": "Amazfit × Yeman Crippa",
+        "kind": "Produkcja, Włochy",
+        "text": "Producent sesji zdjęciowej i planu filmowego nad jeziorem Garda z ambasadorem marki, Yemanem Crippą.",
+        "link": "",
+        "linkLabel": "",
+        "image": "amazfit-garda.jpg",
+        "imageAlt": "Biegacz z zegarkiem Amazfit na nadgarstku trzyma kolce na bieżni",
+        "imagePosition": ""
+      },
+      {
+        "name": "Narwal",
+        "kind": "Event, prowadzenie",
+        "text": "Prowadzenie pierwszego w Polsce eventu marki dla dziennikarzy, w Art Box w Warszawie.",
+        "link": "",
+        "linkLabel": "",
+        "image": "narwal-scena.jpg",
+        "imageAlt": "Kajetan na scenie premiery Narwal, na ekranie robot sprzątający",
+        "imagePosition": ""
+      },
+      {
+        "name": "King of the Bay 2025",
+        "kind": "Relacja z eventu",
+        "text": "Relacja na żywo w social mediach: stories, interakcje z widzami i montaż.",
+        "link": "https://www.instagram.com/king_of_the_bay/",
+        "linkLabel": "Instagram wydarzenia",
+        "image": "king-of-the-bay.jpg",
+        "imageAlt": "Windsurfer z czerwonym żaglem wyskakuje nad falą w Zatoce Puckiej",
+        "imagePosition": ""
+      },
+      {
+        "name": "EcoFlow",
+        "kind": "Produkcja, rynek niemiecki",
+        "text": "Zarządzanie produkcją spotów paneli słonecznych EcoFlow na rynek niemiecki.",
+        "link": "https://youtu.be/znOvu7UeYlw",
+        "linkLabel": "Zobacz spot",
+        "image": "ecoflow-plan-2.jpg",
+        "imageAlt": "Ekipa EcoFlow na planie zdjęciowym przy monitorze podglądu",
+        "imagePosition": ""
+      },
+      {
+        "name": "SimplyBuy",
+        "kind": "E-commerce od zera",
+        "text": "Social media nowego sklepu od pierwszego dnia: 2000 obserwujących i ponad milion wyświetleń w pierwszym miesiącu.",
+        "link": "https://www.tiktok.com/@simplybuypl",
+        "linkLabel": "Profil na TikToku",
+        "image": "simplybuy.jpg",
+        "imageAlt": "Chłopak biegnie przez plac w Warszawie z pudełkiem mystery box",
+        "imagePosition": "50% 25%"
+      },
+      {
+        "name": "Xiaomi Studios",
+        "kind": "Zarządzanie projektem",
+        "text": "Prowadzenie projektu w Polsce, współpraca z agencjami i twórcami wideo, wsparcie merytoryczne.",
+        "link": "https://www.youtube.com/watch?v=LJVyIrabmhk",
+        "linkLabel": "Zobacz wideo",
+        "image": "xiaomi-studios.jpg",
+        "imageAlt": "Kilka osób nagrywa scenę przy statywie w zabytkowym wnętrzu",
+        "imagePosition": ""
+      },
+      {
+        "name": "PKP Cargo",
+        "kind": "Kampania „Lato z parowozami”",
+        "text": "Wakacyjna współpraca na moich i firmowych profilach: eventy, relacje i angażowanie widzów.",
+        "link": "https://www.tiktok.com/@kajetaneo/video/7251200595460181274",
+        "linkLabel": "Zobacz wideo",
+        "image": "pkp-chabowka.jpg",
+        "imageAlt": "Tablica stacji Chabówka na tle zabytkowego wagonu",
+        "imagePosition": ""
+      },
+      {
+        "name": "SkyShowtime",
+        "kind": "UGC przy premierze",
+        "text": "Wideo UGC na TikToka i Instagrama przy premierze serialu „Dexter: Grzech pierworodny”.",
+        "link": "",
+        "linkLabel": "",
+        "image": "skyshowtime.jpg",
+        "imageAlt": "Telewizor z logo SkyShowtime i ręka trzymająca pilota",
+        "imagePosition": ""
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Co mówią marki",
+    "items": [
+      {
+        "quote": "Kajetan dokonał niemożliwego, tworząc największy profil brandu na TikToku w Polsce. Świetna znajomość mediów społecznościowych i reagowanie na trendy, a nawet tworzenie ich. Ciężko znaleźć lepszą osobę do prowadzenia TikToka.",
+        "author": "Xiaomi Polska",
+        "role": "TikTok, stała obsługa"
+      },
+      {
+        "quote": "Praca z Kajetanem to prawdziwa przyjemność. Bardzo dobrze rozumie mechanizmy i trendy rządzące social mediami, ze szczególnym uwzględnieniem TikToka. Dzięki jego wiedzy, profesjonalizmowi, sumienności i kreatywnemu podejściu możemy z sukcesami realizować komunikację naszych marek.",
+        "author": "Ubisoft Polska",
+        "role": "TikTok, stała obsługa"
+      },
+      {
+        "quote": "Świetna współpraca, szybkie działanie i bardzo wysokiej jakości efekty końcowe. Sesja we Włoszech była ogromnym wyzwaniem, ale dzięki opiece Kajetana wszystko przebiegło sprawnie i zgodnie z planem.",
+        "author": "Amazfit",
+        "role": "Sesja nad jeziorem Garda"
+      },
+      {
+        "quote": "Kajetan pomógł zbudować rozpoznawalność naszego sklepu na TikToku. W zaledwie kilka tygodni filmy obejrzano ponad milion razy.",
+        "author": "Anna",
+        "role": "SimplyBuy"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Daj znać, co potrzeba",
+    "lead": "A wszystkim się zajmę. Bez tego kroku nie podziałamy :)",
+    "mailLabel": "Napisz",
+    "mailSubject": "Współpraca z Kajetano"
+  },
+  "footer": {
+    "hello": "Wow, doscrollował_ś aż tu?! Przybijam wirtualną piątkę.",
+    "image": "kajetan-astronauta.jpg",
+    "imageAlt": "Kajetan w skafandrze pokazuje gest shaka obiema dłońmi"
+  }
+}

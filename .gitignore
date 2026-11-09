@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+.taste-skill/
+_stara-strona/
+.DS_Store
+
+# prywatne notatki, nie publikujemy
+BRIEF-kajetano-pl.md
+index.html
+.claude/

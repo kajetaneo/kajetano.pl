@@ -1,0 +1,193 @@
+---
+// Treść strony: src/content/site.json. Tu jest tylko układ.
+import { Picture } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import site from '../content/site.json';
+import { img } from '../lib/img';
+
+const { hero, about, services, stats, portfolio, testimonials, contact, footer, person, socials, nav } = site;
+const stage = [
+  { key: 'start', src: hero.image, alt: hero.imageAlt },
+  { key: 'o-mnie', src: about.image, alt: about.imageAlt },
+  { key: 'uslugi', src: services.image, alt: services.imageAlt },
+];
+const fmt = ['avif', 'webp'] as const;
+const year = new Date().getFullYear();
+---
+<Base>
+  <header class="site-header">
+    <a class="wordmark" href="#start" aria-label="Kajetano, na górę strony">kajetano<span>.</span></a>
+    <nav aria-label="Główna">
+      <ul>
+        {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+        <li><a class="btn" href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="tresc">
+    <div class="split">
+      <div class="reading">
+        <section class="panel hero" id="start" data-stage="start" aria-labelledby="h-hero">
+          <h1 id="h-hero" class="intro">{hero.title.replace(/!$/, '')}<span class="dot">!</span></h1>
+          <p class="lead intro" style="--i:1">{hero.lead}</p>
+          <div class="actions intro" style="--i:2">
+            <a class="btn btn--accent" href="#kontakt">{hero.cta} <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--quiet" href="#portfolio">{hero.ctaSecondary}</a>
+          </div>
+          <ul class="socials intro" style="--i:3" aria-label="Moje profile">
+            {socials.map((s) => <li><a href={s.url} target="_blank" rel="noopener">{s.name} <span>{s.handle}</span></a></li>)}
+          </ul>
+        </section>
+
+        <section class="panel letter" id="o-mnie" data-stage="o-mnie" aria-labelledby="h-about">
+          <div class="inline-photo"><Picture src={img(about.image)} formats={fmt} widths={[480, 800]} sizes="100vw" alt={about.imageAlt} loading="lazy" /></div>
+          <h2 id="h-about" class="rise">{about.title}</h2>
+          {about.paragraphs.map((p, i) => <p class="rise" style={`--i:${i + 1}`}>{p}</p>)}
+          <div class="sign rise" style="--i:5"><b>{about.signature}</b><span>{about.signatureRole}</span></div>
+        </section>
+
+        <section class="panel services" id="uslugi" data-stage="uslugi" aria-labelledby="h-services">
+          <div class="inline-photo"><Picture src={img(services.image)} formats={fmt} widths={[480, 800]} sizes="100vw" alt={services.imageAlt} loading="lazy" /></div>
+          <h2 id="h-services" class="rise">{services.title}</h2>
+          <ul>
+            {services.items.map((s, i) => (
+              <li class="rise" style={`--i:${i}`}>
+                <h3>{s.name}</h3><span class="tag">{s.tag}</span>
+                <p>{s.text}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
+
+      <figure class="stage" aria-hidden="true">
+        {stage.map((s, i) => (
+          <Picture
+            src={img(s.src)} formats={fmt} widths={[480, 720, 960, 1280]} sizes="(max-width: 900px) 100vw, 50vw"
+            alt="" pictureAttributes={{ 'data-key': s.key, class: i === 0 ? 'is-on zoom' : 'zoom' }}
+            loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : 'auto'}
+          />
+        ))}
+      </figure>
+    </div>
+
+    <section class="stats" aria-labelledby="h-stats">
+      <h2 id="h-stats" class="rise">{stats.title}</h2>
+      <div class="mosaic">
+        <div class="photo"><Picture src={img(stats.image)} formats={fmt} widths={[640, 1024, 1600]} sizes="(max-width: 900px) 100vw, 66vw" alt={stats.imageAlt} loading="lazy" /></div>
+        {stats.items.map((s, i) => (
+          <div class={`tile ${['tile--accent', 'tile--dark', 'tile--sun'][i % 3]}`}>
+            <b class="rise">{s.value}</b><span class="rise" style="--i:1">{s.label}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="work" id="portfolio" aria-labelledby="h-work">
+      <div class="work-head">
+        <h2 id="h-work" class="rise">{portfolio.title}</h2>
+        <div class="rise" style="--i:1">
+          <p>{portfolio.lead}</p>
+          <p class="brands">{portfolio.brands.join(' · ')}</p>
+        </div>
+      </div>
+      <div class="index">
+        <ol>
+          {portfolio.projects.map((p, i) => (
+            <li class={`project rise ${i === 0 ? 'is-active' : ''}`} data-key={`p${i}`}>
+              <div class="thumb"><Picture src={img(p.image)} formats={fmt} widths={[480, 800]} sizes="100vw" alt={p.imageAlt} loading="lazy" style={p.imagePosition ? `object-position:${p.imagePosition}` : undefined} /></div>
+              <h3><button type="button">{p.name}</button></h3>
+              <span class="kind">{p.kind}</span>
+              <div class="detail">
+                <p>{p.text}{p.link && <> <a class="link" href={p.link} target="_blank" rel="noopener">{p.linkLabel}&nbsp;<span aria-hidden="true">↗</span></a></>}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+        <div class="preview" aria-hidden="true">
+          <div class="frame">
+            {portfolio.projects.map((p, i) => (
+              <Picture src={img(p.image)} formats={fmt} widths={[480, 720, 960]} sizes="40vw" alt="" pictureAttributes={{ 'data-key': `p${i}`, class: i === 0 ? 'is-on' : '' }} loading="lazy" style={p.imagePosition ? `object-position:${p.imagePosition}` : undefined} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quotes" id="opinie" aria-labelledby="h-quotes">
+      <h2 id="h-quotes" class="rise">{testimonials.title}</h2>
+      <div class="letters">
+        {testimonials.items.map((t) => {
+          const [first, ...rest] = t.quote.split(/(?<=[.!?])\s+/);
+          return (
+            <figure class="rise">
+              <blockquote>
+                <p>{first}</p>
+                {rest.length > 0 && <p>{rest.join(' ')}</p>}
+              </blockquote>
+              <figcaption><b>{t.author}</b><span>{t.role}</span></figcaption>
+            </figure>
+          );
+        })}
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt" aria-labelledby="h-contact">
+      <div class="contact-head">
+        <h2 id="h-contact" class="rise">{contact.title}</h2>
+        <p class="rise" style="--i:1">{contact.lead}</p>
+      </div>
+      <ul class="rows">
+        <li>
+          <a class="js-mail" href="#kontakt" data-u={person.emailUser} data-d={person.emailDomain} data-s={contact.mailSubject}>
+            <span class="visually-hidden">{contact.mailLabel}: </span><span class="label js-mail-text">{person.emailUser}(małpa){person.emailDomain}</span>
+          </a>
+        </li>
+        <li>
+          <div class="row">
+            <span class="socials-row">
+              {socials.map((s) => <a href={s.url} target="_blank" rel="noopener">{s.name}</a>)}
+            </span>
+          </div>
+        </li>
+        <li>
+          <a class="js-mail" href="#kontakt" data-u={person.emailUser} data-d={person.emailDomain} data-s={contact.mailSubject}>
+            <span class="label">Cześć!</span>
+            <span class="round" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            <span class="visually-hidden">Napisz maila</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="photo"><Picture src={img(footer.image)} formats={fmt} widths={[480, 800]} sizes="(max-width: 900px) 100vw, 50vw" alt={footer.imageAlt} loading="lazy" /></div>
+    <div class="foot">
+      <a class="wordmark" href="#start">kajetano<span>.</span></a>
+      <p class="hi">{footer.hello}</p>
+      <nav aria-label="Stopka">
+        <ul>
+          {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="cols">
+        <div>
+          <b>Kontakt</b>
+          <ul>
+            <li><a class="link js-mail" href="#kontakt" data-u={person.emailUser} data-d={person.emailDomain} data-s={contact.mailSubject}><span class="js-mail-text">{person.emailUser}(małpa){person.emailDomain}</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <b>Social media</b>
+          <ul>{socials.map((s) => <li><a class="link" href={s.url} target="_blank" rel="noopener">{s.name}</a></li>)}</ul>
+        </div>
+      </div>
+      <p class="legal">© {year} {person.name} · kajetano.pl · Bez ciasteczek.</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.ts"></script>
+</Base>
